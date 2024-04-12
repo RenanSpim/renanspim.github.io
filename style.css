@@ -1,9 +1,9 @@
 :root {
-    --dark-bg-color: rgb(19, 10, 36);
-    --light-bg-color: rgb(217, 224, 245);
+    --dark-bg-color: rgb(14, 14, 29);
+    --light-bg-color: rgb(228, 231, 238);
     --bg-color: var(--light-bg-color);
-    --dark-text-color: rgb(217, 224, 245);
-    --light-text-color: rgb(19, 10, 36);
+    --dark-text-color: rgb(228, 231, 238);
+    --light-text-color: rgb(14, 14, 29);
     --text-color: var(--light-text-color);
     --ball-size: 20px;
     --svg-size: 60px;
