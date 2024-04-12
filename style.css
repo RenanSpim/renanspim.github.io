@@ -1,3 +1,13 @@
+:root {
+    --dark-bg-color: rgb(19, 10, 36);
+    --light-bg-color: rgb(217, 224, 245);
+    --bg-color: var(--light-bg-color);
+    --dark-text-color: rgb(217, 224, 245);
+    --light-text-color: rgb(19, 10, 36);
+    --text-color: var(--light-text-color);
+}
+
 body {
-    background: white;
+    background: var(--bg-color);
+    color: var(--text-color);
 }

@@ -1,12 +1,21 @@
+const { style } = document.documentElement;
 const alavancaContainer = document.querySelector("#alavanca-container");
 
 let temaStr = localStorage.getItem("tema");
+
+if (temaStr === null) {
+    temaStr = "claro";
+    localStorage.setItem("tema", "claro");
+}
+
 const temas = {
-    claro: () => {
-        console.log("claro");
+    claro() {
+        style.setProperty("--bg-color", "var(--light-bg-color)");
+        style.setProperty("--text-color", "var(--light-text-color)");
     },
-    escuro: () => {
-        console.log("escuro");
+    escuro() {
+        style.setProperty("--bg-color", "var(--dark-bg-color)");
+        style.setProperty("--text-color", "var(--dark-text-color)");
     }
 };
 
