@@ -5,9 +5,52 @@
     --dark-text-color: rgb(217, 224, 245);
     --light-text-color: rgb(19, 10, 36);
     --text-color: var(--light-text-color);
+    --ball-size: 20px;
+    --svg-size: 60px;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
 }
 
 body {
     background: var(--bg-color);
     color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+svg {
+    fill: var(--text-color);
+    width: var(--svg-size);
+    height: var(--svg-size);
+}
+
+.alavanca-container, .alavanca-container * {
+    display: flex;
+    cursor: pointer;
+    background: var(--text-color);
+    padding: 5px;
+    width: calc(var(--ball-size) * 3);
+    border-radius: var(--ball-size);
+    user-select: none;
+}
+
+.bola {
+    width: var(--ball-size);
+    height: var(--ball-size);
+    border-radius: var(--ball-size);
+    background: var(--bg-color);
+}
+
+.anchor-container {
+    display: flex;
+    flex-flow: column;
+    width: fit-content;
+    align-items: center;
+    margin: 10px;
 }
