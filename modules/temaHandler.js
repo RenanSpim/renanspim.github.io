@@ -7,8 +7,8 @@ const lua = bola.querySelector("#lua");
 let temaStr = localStorage.getItem("tema");
 
 if (temaStr === null) {
-    temaStr = "claro";
-    localStorage.setItem("tema", "claro");
+    temaStr = window.matchMedia("(prefers-color-scheme: dark)") ? "escuro" : "claro";
+    localStorage.setItem("tema", temaStr);
 }
 
 const temas = {

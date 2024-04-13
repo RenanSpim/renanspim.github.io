@@ -1,10 +1,18 @@
+:root {
+    --ball-size: 30px;
+    --svg-size: 60px;
+    --pd-size: 5px;
+}
+
 header {
+    position: fixed;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 5px;
+    padding: 7px;
     background: rgba(90, 80, 100, 0.2);
     border-bottom: 2px solid var(--text-color);
 }
@@ -12,16 +20,16 @@ header {
 
 .alavanca-container {
     height: fit-content;
-    min-width: calc(var(--ball-size) * 3);
-    max-width: calc(var(--ball-size) * 3);
+    min-width: calc((var(--ball-size) + 11px) * 2);
+    max-width: calc((var(--ball-size) + 11px) * 2);
+    justify-content: left;
+    padding: var(--pd-size);
 }
 
 .alavanca-container, .alavanca-container * {
     display: flex;
     cursor: pointer;
     background: var(--bg-color);
-    padding: 5px;
-    width: calc(var(--ball-size) * 3);
     border-radius: var(--ball-size);
     user-select: none;
 }
@@ -29,15 +37,16 @@ header {
 .bola {
     width: var(--ball-size);
     height: var(--ball-size);
-    border-radius: var(--ball-size);
+    border-radius: 100%;
     background: var(--text-color);
+    padding: var(--pd-size);
 }
 
 .bola svg {
     transition: none;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: var(--pd-size);
+    left: var(--pd-size);
     width: var(--ball-size);
     height: var(--ball-size);
     fill: var(--bg-color);
@@ -47,8 +56,7 @@ header {
 
 .bola svg * {
     transition: none;
-    width: var(--ball-size);
-    height: var(--ball-size);
+    stroke: var(--bg-color);
 }
 
 .bola .svg-show {
