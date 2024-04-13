@@ -19,10 +19,9 @@ header {
 .alavanca-container, .alavanca-container * {
     display: flex;
     cursor: pointer;
-    background: var(--text-color);
+    background: var(--bg-color);
     padding: 5px;
     width: calc(var(--ball-size) * 3);
-    
     border-radius: var(--ball-size);
     user-select: none;
 }
@@ -31,7 +30,27 @@ header {
     width: var(--ball-size);
     height: var(--ball-size);
     border-radius: var(--ball-size);
-    background: var(--bg-color);
+    background: var(--text-color);
+}
+
+.bola svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--ball-size);
+    height: var(--ball-size);
+    fill: var(--bg-color);
+    background: none;
+    opacity: 0%;
+}
+
+.bola svg * {
+    width: var(--ball-size);
+    height: var(--ball-size);
+}
+
+.bola .svg-show {
+    opacity: 100%;
 }
 
 .anchor-container {
