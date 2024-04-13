@@ -3,10 +3,12 @@
     --svg-size: 60px;
     --pd-size: 5px;
     --text-color-header: var(--dark-text-color);
+    --border-bottom: 3px;
+    --side-bar-padding: 10px;
 }
 
 header {
-    height: calc((var(--ball-size) + 10px) * 2 + 3px);
+    height: calc((var(--ball-size) + 10px) * 2 + var(--border-bottom));
 }
 
 .nav {
@@ -18,15 +20,14 @@ header {
     flex-wrap: nowrap;
     justify-content: space-around;
     padding: 10px;
-    background: rgb(25, 47, 119);
+    background: var(--site-color);
     color: var(--text-color-header);
-    border-bottom: 3px solid var(--text-color);
+    border-bottom: var(--border-bottom) solid var(--text-color);
 }
 
 .alavanca-container {
     height: fit-content;
-    min-width: calc((var(--ball-size) + 11px) * 2);
-    max-width: calc((var(--ball-size) + 11px) * 2);
+    width: calc((var(--ball-size) + 11px) * 2);
     justify-content: left;
     padding: var(--pd-size);
 }
@@ -78,6 +79,7 @@ header {
 .anchors-container {
     display: flex;
     flex-direction: row;
+
     justify-content: space-between;
     width: 150px;
 }
@@ -97,15 +99,19 @@ header {
     height: 50px;
 }
 
+body {
+    height: 200vh;
+}
+
 .side-bar {
-    background: red;
-    min-width: 200px;
-    max-width: 40vw;
-    width: 100%;
     position: fixed;
+    background: var(--site-color);
+    height: 100%;
     right: 0;
     opacity: 0;
     z-index: -1;
+    padding: var(--side-bar-padding);
+    width: calc(min(300px, 100vw) - (var(--side-bar-padding) * 2));
     transform: translateX(100%);
 }
 

@@ -5,6 +5,7 @@
     --dark-text-color: rgb(228, 231, 238);
     --light-text-color: rgb(14, 14, 29);
     --text-color: var(--light-text-color);
+    --site-color: rgb(25, 47, 119);
 }
 
 * {
