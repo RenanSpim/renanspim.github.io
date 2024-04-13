@@ -11,6 +11,7 @@
 
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: .5px;
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
     outline: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
