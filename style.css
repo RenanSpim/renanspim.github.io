@@ -12,6 +12,10 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -28,29 +32,4 @@ svg {
     fill: var(--text-color);
     width: var(--svg-size);
     height: var(--svg-size);
-}
-
-.alavanca-container, .alavanca-container * {
-    display: flex;
-    cursor: pointer;
-    background: var(--text-color);
-    padding: 5px;
-    width: calc(var(--ball-size) * 3);
-    border-radius: var(--ball-size);
-    user-select: none;
-}
-
-.bola {
-    width: var(--ball-size);
-    height: var(--ball-size);
-    border-radius: var(--ball-size);
-    background: var(--bg-color);
-}
-
-.anchor-container {
-    display: flex;
-    flex-flow: column;
-    width: fit-content;
-    align-items: center;
-    margin: 10px;
 }
