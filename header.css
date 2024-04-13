@@ -30,10 +30,12 @@ header {
 }
 
 .alavanca-container {
-    width: calc((var(--ball-size) + 11px) * 2);
+    width: calc((var(--ball-size) + var(--bola-padding) * 2) * 2);
     justify-content: left;
-    padding: var(--bola-padding);
-    border: 3px solid var(--dark-bg-color);
+    border-top: 2px solid var(--light-bg-color);
+    border-bottom: 2px solid var(--light-bg-color);
+    border-left: 5px solid var(--light-bg-color);
+    border-right: 5px solid var(--light-bg-color);
 }
 
 .alavanca-container, .alavanca-container * {
@@ -45,6 +47,7 @@ header {
 }
 
 .bola {
+    transition: all cubic-bezier(0.8,0,0,1) .5s;
     width: var(--ball-size);
     height: var(--ball-size);
     background: var(--site-color);
@@ -109,6 +112,7 @@ header {
 
 .side-bar {
     position: fixed;
+    transition: all cubic-bezier(0.8,0,0,1) .5s;
     background: var(--site-color);
     height: 100%;
     top: calc(var(--header-heigth) - var(--border-size));
