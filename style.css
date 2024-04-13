@@ -5,7 +5,7 @@
     --dark-text-color: rgb(228, 231, 238);
     --light-text-color: rgb(14, 14, 29);
     --text-color: var(--light-text-color);
-    --ball-size: 20px;
+    --ball-size: 25px;
     --svg-size: 60px;
 }
 

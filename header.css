@@ -34,6 +34,7 @@ header {
 }
 
 .bola svg {
+    transition: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -45,6 +46,7 @@ header {
 }
 
 .bola svg * {
+    transition: none;
     width: var(--ball-size);
     height: var(--ball-size);
 }
