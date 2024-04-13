@@ -1,14 +1,18 @@
 :root {
     --ball-size: 30px;
     --svg-size: 60px;
-    --pd-size: 5px;
+    --bola-padding: 5px;
     --text-color-header: var(--dark-text-color);
-    --border-bottom: 3px;
+    --border-size: 3px;
     --side-bar-padding: 10px;
+    --menu-padding: 10px;
+    --menu-size: 50px;
+    --header-padding: 10px;
+    --header-heigth: calc((var(--menu-size) + 2 * (var(--menu-padding) + var(--header-padding))) + var(--border-size));
 }
 
 header {
-    height: calc((var(--ball-size) + 10px) * 2 + var(--border-bottom));
+    height: var(--header-heigth);
 }
 
 .nav {
@@ -19,23 +23,23 @@ header {
     align-items: center;
     flex-wrap: nowrap;
     justify-content: space-around;
-    padding: 10px;
+    padding: var(--header-padding);
     background: var(--site-color);
     color: var(--text-color-header);
-    border-bottom: var(--border-bottom) solid var(--text-color);
+    border-bottom: var(--border-size) solid var(--text-color);
 }
 
 .alavanca-container {
-    height: fit-content;
     width: calc((var(--ball-size) + 11px) * 2);
     justify-content: left;
-    padding: var(--pd-size);
+    padding: var(--bola-padding);
+    border: 3px solid var(--dark-bg-color);
 }
 
 .alavanca-container, .alavanca-container * {
     display: flex;
     cursor: pointer;
-    background: var(--bg-color);
+    background: var(--light-bg-color);
     border-radius: var(--ball-size);
     user-select: none;
 }
@@ -43,18 +47,17 @@ header {
 .bola {
     width: var(--ball-size);
     height: var(--ball-size);
-    border-radius: 100%;
-    background: var(--text-color);
-    padding: var(--pd-size);
+    background: var(--site-color);
+    padding: var(--bola-padding);
 }
 
 .bola svg {
     transition: none;
     position: absolute;
-    top: var(--pd-size);
-    left: var(--pd-size);
-    width: var(--ball-size);
-    height: var(--ball-size);
+    top: var(--bola-padding);
+    left: var(--bola-padding);
+    width: calc(var(--ball-size));
+    height: calc(var(--ball-size));
     fill: var(--bg-color);
     background: none;
     opacity: 0%;
@@ -62,6 +65,7 @@ header {
 
 .bola svg * {
     transition: none;
+    fill: var(--bg-color);
     stroke: var(--bg-color);
 }
 
@@ -79,44 +83,44 @@ header {
 .anchors-container {
     display: flex;
     flex-direction: row;
-
     justify-content: space-between;
     width: 150px;
 }
 
 .menu-container {
-    padding: 5px;
-    background: var(--text-color);
+    padding: var(--menu-padding);
+    background: var(--light-bg-color);
     border-radius: 100%;
-    width: 50px;
-    height: 50px;
+    width: var(--menu-size);
+    height: var(--menu-size);
     cursor: pointer;
 }
 
-.menu-container svg {
-    fill: var(--bg-color);
-    width: 50px;
-    height: 50px;
+.menu-container:active svg,
+.menu-container.show svg {
+    fill: var(--site-color);
 }
 
-body {
-    height: 200vh;
+.menu-container svg {
+    fill: var(--dark-bg-color);
+    width: 50px;
+    height: 50px;
 }
 
 .side-bar {
     position: fixed;
     background: var(--site-color);
     height: 100%;
+    top: calc(var(--header-heigth) - var(--border-size));
     right: 0;
-    opacity: 0;
     z-index: -1;
     padding: var(--side-bar-padding);
-    width: calc(min(300px, 100vw) - (var(--side-bar-padding) * 2));
+    width: calc(min(500px, 0vw) );
     transform: translateX(100%);
+    border-left: 3px solid var(--text-color);
 }
 
 .side-bar.show {
-    opacity: 100%;
     z-index: 10;
     transform: translateX(0);
 }
