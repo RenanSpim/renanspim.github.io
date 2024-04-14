@@ -103,9 +103,14 @@ header {
     cursor: pointer;
 }
 
+.menu-container:active,
+.menu-container.show {
+    background: transparent;
+}
+
 .menu-container:active svg,
 .menu-container.show svg {
-    fill: var(--site-color);
+    fill: var(--light-bg-color);
 }
 
 .menu-container svg {
@@ -160,4 +165,8 @@ header {
 .side-anchor.current h3 {
     fill: var(--site-color2);
     color: var(--site-color2);
+}
+
+body {
+    height: 200vh;
 }
