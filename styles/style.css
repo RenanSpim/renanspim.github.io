@@ -7,7 +7,7 @@
     --text-color: var(--light-text-color);
     --site-color: rgb(58, 70, 78);
     --site-color2: rgb(68, 150, 204);
-    --transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+    --transition: none;
 }
 
 * {

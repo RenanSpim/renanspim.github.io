@@ -43,6 +43,3 @@ window.addEventListener("click", e => {
     }
 });
 
-setTimeout(() => {
-    sideBar.style.transition = "var(--transition)";
-}, 100);

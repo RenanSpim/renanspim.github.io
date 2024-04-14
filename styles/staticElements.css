@@ -120,7 +120,7 @@ header {
 }
 
 .side-bar {
-    transition: none;
+    transition: var(--transition);
     position: fixed;
     display: flex;
     flex-direction: column;
