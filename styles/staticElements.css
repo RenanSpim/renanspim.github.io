@@ -9,6 +9,7 @@
     --menu-size: 50px;
     --header-padding: 10px;
     --header-heigth: calc((var(--menu-size) + 2 * (var(--menu-padding) + var(--header-padding))) + var(--border-size) * 1.5);
+    --icons-size: 35px;
 }
 
 header {
@@ -137,10 +138,13 @@ header {
 .side-anchor {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .side-anchor svg {
     margin-right: 10px;
+    width: var(--icons-size);
+    height: var(--icons-size);
 }
 
 
