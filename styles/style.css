@@ -36,3 +36,16 @@ svg {
     width: var(--svg-size);
     height: var(--svg-size);
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--site-color);
+    border-left: 2px solid black;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+    border-left: 2px solid black;
+}
