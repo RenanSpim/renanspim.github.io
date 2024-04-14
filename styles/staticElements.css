@@ -166,3 +166,7 @@ header {
     fill: var(--site-color2);
     color: var(--site-color2);
 }
+
+body {
+    height: 200vh;
+}
