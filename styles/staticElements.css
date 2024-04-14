@@ -8,7 +8,7 @@
     --menu-padding: 10px;
     --menu-size: 50px;
     --header-padding: 10px;
-    --header-heigth: calc((var(--menu-size) + 2 * (var(--menu-padding) + var(--header-padding))) + var(--border-size));
+    --header-heigth: calc((var(--menu-size) + 2 * (var(--menu-padding) + var(--header-padding))) + var(--border-size) * 1.5);
 }
 
 header {
@@ -22,7 +22,7 @@ header {
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: var(--header-padding);
     background: var(--site-color);
     color: var(--text-color-header);
@@ -30,6 +30,9 @@ header {
 }
 
 .alavanca-container {
+    position: absolute;
+    right: calc(var(--bola-padding) * 2);
+    bottom: calc((var(--ball-size) + var(--bola-padding) * 2) * 3);
     width: calc((var(--ball-size) + var(--bola-padding) * 2) * 2);
     justify-content: left;
     border-top: 2px solid var(--light-bg-color);
@@ -111,8 +114,10 @@ header {
 }
 
 .side-bar {
+    transition: none;
     position: fixed;
-    transition: all cubic-bezier(0.8,0,0,1) .5s;
+    display: flex;
+    flex-direction: column;
     background: var(--site-color);
     height: 100%;
     top: calc(var(--header-heigth) - var(--border-size));
@@ -125,6 +130,30 @@ header {
 }
 
 .side-bar.show {
-    z-index: 10;
+    z-index: 100;
     transform: translateX(0);
+}
+
+.side-anchor {
+    display: flex;
+    align-items: center;
+}
+
+.side-anchor svg {
+    margin-right: 10px;
+}
+
+
+.side-anchor svg,
+.side-anchor svg *,
+.side-anchor h3 {
+    fill: var(--light-bg-color);
+    color: var(--light-bg-color);
+}
+
+.side-anchor.current svg,
+.side-anchor.current svg *,
+.side-anchor.current h3 {
+    fill: var(--site-color2);
+    color: var(--site-color2);
 }
