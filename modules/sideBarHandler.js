@@ -7,10 +7,6 @@ if (localStorage.getItem("sidebar") === "on") {
     sideBar.classList.add("show");
 }
 
-sideBar.style.width = (window.innerWidth * 0.3 < 200)
-    ? "calc(100vw - (var(--side-bar-padding) * 2))"
-    : "calc(300px - (var(--side-bar-padding) * 2))";
-
 function filhoTem(filho, elemento) {
     let curr = filho;
 
@@ -21,12 +17,6 @@ function filhoTem(filho, elemento) {
 
     return false;
 }
-
-window.addEventListener("resize", () => {
-    sideBar.style.width = (window.innerWidth * 0.3 < 200)
-    ? "calc(100vw - (var(--side-bar-padding) * 2))"
-    : "calc(300px - (var(--side-bar-padding) * 2))";
-});
 
 window.addEventListener("click", e => {
     if (filhoTem(e.target, menuContainer)) {

@@ -130,7 +130,7 @@ header {
     right: 0;
     z-index: -1;
     padding: var(--side-bar-padding);
-    width: calc(min(500px, 0vw) );
+    width: calc(min(100vw, 400px) - var(--side-bar-padding) * 2);
     transform: translateX(100%);
     box-shadow: 0px 0px 5px 2px var(--site-color);
 }
