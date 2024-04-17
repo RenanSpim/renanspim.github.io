@@ -3,7 +3,7 @@
     --svg-size: 60px;
     --bola-padding: 5px;
     --text-color-header: var(--dark-text-color);
-    --border-size: 3px;
+    --border-size: 2px;
     --side-bar-padding: 10px;
     --menu-padding: 10px;
     --menu-size: 50px;
@@ -27,7 +27,7 @@ header {
     padding: var(--header-padding);
     background: var(--site-color);
     color: var(--text-color-header);
-    border-bottom: var(--border-size) solid var(--text-color);
+    box-shadow: 0px 0px 5px 2px var(--site-color);
 }
 
 .alavanca-container {
@@ -132,7 +132,7 @@ header {
     padding: var(--side-bar-padding);
     width: calc(min(500px, 0vw) );
     transform: translateX(100%);
-    border-left: 3px solid var(--text-color);
+    box-shadow: 0px 0px 5px 2px var(--site-color);
 }
 
 .side-bar.show {
