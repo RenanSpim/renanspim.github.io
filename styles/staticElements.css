@@ -131,7 +131,7 @@ header {
     z-index: -1;
     padding: var(--side-bar-padding);
     width: calc(min(100vw, 400px) - var(--side-bar-padding) * 2);
-    transform: translateX(100%);
+    transform: translateX(110%);
     box-shadow: 0px 0px 5px 2px var(--site-color);
 }
 
@@ -165,8 +165,4 @@ header {
 .side-anchor.current h3 {
     fill: var(--site-color2);
     color: var(--site-color2);
-}
-
-body {
-    height: 200vh;
 }

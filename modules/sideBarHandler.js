@@ -1,6 +1,4 @@
-const navbar = document.querySelector(".nav");
 const menuContainer = document.querySelector(".menu-container");
-const sideBar = document.querySelector(".side-bar");
 
 if (localStorage.getItem("sidebar") === "on") {
     menuContainer.classList.add("show");
