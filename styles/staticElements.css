@@ -80,20 +80,6 @@ header {
     opacity: 100%;
 }
 
-.anchor-container {
-    display: flex;
-    flex-flow: column;
-    width: fit-content;
-    align-items: center;
-}
-
-.anchors-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 150px;
-}
-
 .menu-container {
     padding: var(--menu-padding);
     background: var(--light-bg-color);

@@ -24,6 +24,7 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     margin: 0;
+    min-height: 100vh;
 }
 
 a {
@@ -35,6 +36,33 @@ svg {
     fill: var(--text-color);
     width: var(--svg-size);
     height: var(--svg-size);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 2px solid var(--site-color);
+}
+
+footer .anchors-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+}
+
+footer .anchor-container {
+    display: flex;
+    flex-flow: column;
+    width: fit-content;
+    align-items: center;
+}
+
+footer .anchor-container:hover * {
+    fill: var(--site-color2);
+    color: var(--site-color2);
 }
 
 ::-webkit-scrollbar {
